@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin:0;padding:0;border:0;}
+			body{
+				padding:5%;
+			}
+			
+		</style>
+		<link rel="stylesheet" href="css/select2.css" />
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<script src='http://libs.baidu.com/jquery/2.0.0/jquery.js'></script>
+		
+	</head>
+	<body>
+		<!--select2---01-->
+		<p>select2---01</p>
+		<select class="js-example-basic-single form-control form-group">
+		  <option value="AL">Alabama</option>
+		  <option value="BL">sdf</option>
+		  <option value="CL">asfa</option>
+		  <option value="DL">eeww</option>
+		  <option value="EL">h</option>
+		  <option value="WY">Wyoming</option>
+		</select>
+		<br />
+		<br />
+		<p>select2---02</p>
+		<!--select02----02-->
+		<select class="js-example-basic-multiple form-control form-group" multiple="multiple">
+		  <option value="AL">Alabama</option>
+		  <option value="BL">sdf</option>
+		  <option value="CL">asfa</option>
+		  <option value="DL">eeww</option>
+		  <option value="EL">h</option>
+		  <option value="WY">Wyoming</option>
+		</select>
+		<br />
+		<br />
+		<p>遍历数组数据</p>
+		<select class="js-example-data-array-selected form-control">
+  			<option value="2" selected="selected">duplicate</option>
+		</select>
+	</body>
+	
+	<script src="js/select2.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+//			select02----02
+		  $(".js-example-basic-single").select2();
+//		  select02----02
+		  $(".js-example-basic-multiple").select2();
+//		 select02----02
+		 var data = [
+		 	{ id: 0, text: 'enhancement' },
+		 	{ id: 1, text: 'bug' },
+		 	{ id: 2, text: 'duplicate' },
+		 	{ id: 3, text: 'invalid' },
+		 	{ id: 4, text: 'wontfix' },
+		 	{ id: 5, text: '5' },
+		 	{ id: 6, text: '6' },
+		 	{ id: 7, text: '7' },
+		 	{ id: 8, text: '8' },
+		 	{ id: 9, text: '9' },
+		 	{ id: 10, text: '10' },
+		 	{ id: 11, text: '11' },
+		 	{ id: 12, text: '12' }
+		 	];
+		  $(".js-example-data-array-selected").select2({
+               data: data
+          })
+		});
+	</script>
+	
+</html>
